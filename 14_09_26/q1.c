@@ -1,3 +1,9 @@
+/* 
+  Q1) WACP to implement a doubly link list with functions 
+  i. Insert left  ii. Insert right  
+  iii. Delete node iv. Display
+*/
+
 # include <stdio.h>
 # include <stdlib.h>
 
