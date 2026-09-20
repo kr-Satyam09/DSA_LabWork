@@ -9,19 +9,19 @@ typedef struct node {
 } node;
 
 node* insert_sort(node *head, int val) {
-    node *new_node = (node *)malloc(sizeof(node));
-    new_node->data = val;
-    new_node->next = NULL;
+    node *p = (node *)malloc(sizeof(node));
+    p->data = val;
+    p->next = NULL;
     if (head == NULL || head->data >= val) {
-        new_node->next = head;
-        return new_node;
+        p->next = head;
+        return p;
     }
     node *temp = head;
     while (temp->next != NULL && temp->next->data < val) {
         temp = temp->next;
     }
-    new_node->next = temp->next;
-    temp->next = new_node;
+    p->next = temp->next;
+    temp->next = p;
     return head;
 }
 
