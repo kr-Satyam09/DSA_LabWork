@@ -90,7 +90,7 @@ int main() {
             case 4:
                 printf("List 1: "); disp(list1);
                 printf("List 2: "); disp(list2);
-                printf("Merged: "); displ(merged_list);
+                printf("Merged: "); disp(merged_list);
                 break;
             case 5:
                 break;
