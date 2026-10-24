@@ -1,3 +1,5 @@
+// Q1) WACP to implement matrix multiplication.
+
 #include <stdio.h>
 
 int main() {
