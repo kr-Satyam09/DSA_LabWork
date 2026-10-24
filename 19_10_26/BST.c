@@ -70,24 +70,6 @@ void countleaf(tree *root,int *p){
     }
 }
 
-/*void disp_tree(tree *r, int depth, char branch){
-    int i;
-    if(r == NULL){
-        return;
-    }
-
-    for(i = 0; i < depth; i++){
-        printf("    ");
-    }
-    if(depth > 0){
-        printf("%c-- ",branch);
-    }
-    printf("%d\n",r->data);
-
-    disp_tree(r->left,depth + 1,'L');
-    disp_tree(r->right,depth + 1,'R');
-}*/
-
 int main(){
     tree *root = NULL;
     int ch, num,count;
