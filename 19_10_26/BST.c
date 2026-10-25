@@ -18,10 +18,6 @@ void create(tree **r,int val){
     tree *p = NULL;
     if(*r == NULL){
         p = (tree*)malloc(sizeof(tree));
-        /*if(p == NULL){
-            printf("Unable to allocate memory.\n");
-            return;
-        }*/
         p->data = val;
         p->left = NULL;
         p->right = NULL;
@@ -74,7 +70,7 @@ int main(){
     tree *root = NULL;
     int ch, num,count;
     do{
-        printf("\n1.Create tree |2.Pre_order |3.In_order |4.Post_order |5.Count leaf(s) |6.Exit\nEnter choice: ");
+        printf("\n1.Create tree |2.Display |3.Count leaf(s) |4.Exit\nEnter choice: ");
         scanf("%d",&ch);
 
         switch (ch){
@@ -84,29 +80,19 @@ int main(){
                 create(&root,num);
                 break;
             case 2:
-                printf("Display in pre_order: ");
-                disp_pre(root);
-                printf("\n");
+                printf("\nPre_order: "); disp_pre(root);
+                printf("\nIn_order: "); disp_in(root);
+                printf("\nPost_order:"); disp_post(root);
                 break;
             case 3:
-                printf("Display in In_order: ");
-                disp_in(root);
-                printf("\n");
-                break;
-            case 4:
-                printf("Display in post_order:");
-                disp_post(root);
-                printf("\n");
-                break;
-            case 5:
                 count = 0;
                 countleaf(root,&count);
                 printf("Num. of leaf nodes are %d\n",count);
                 break;
-            case 6:
+            case 4:
                 printf("Exiting!\n\n");
                 break;
         }
-    }while(ch != 6);
+    }while(ch != 4);
     return 0;
 }
